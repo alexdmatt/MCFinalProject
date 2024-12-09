@@ -1,0 +1,14 @@
+<resources>
+    <id name="due_date_button" />
+    <id name="selected_date_text" />
+    <id name="priority_0" />
+    <id name="priority_1" />
+    <id name="priority_2" />
+    <id name="priority_3" />
+    <id name="priority_4" />
+    <id name="priority_5" />
+    <id name="save_button" />
+    <id name="home_button" />
+    <id name="task_description" />
+    <id name="task_name" />
+</resources>

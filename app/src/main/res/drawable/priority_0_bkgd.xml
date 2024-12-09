@@ -1,0 +1,17 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State for the selected button -->
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@color/priority_0" /> <!-- Background color for priority 0 -->
+            <corners android:radius="8dp" />
+            <stroke android:width="4dp" android:color="#000000" /> <!-- Bold black outline -->
+        </shape>
+    </item>
+    <!-- State for unselected button -->
+    <item>
+        <shape>
+            <solid android:color="@color/priority_0" /> <!-- Background color for priority 0 -->
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>

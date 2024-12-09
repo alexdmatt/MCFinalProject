@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E0DDCF">
+
+    <!-- Title Section -->
+
+    <TextView
+        android:id="@+id/title_taskflow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TaskFlow"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:textColor="#3D348B"
+        android:contentDescription="TaskFlow Application Title" />
+
+    <!-- Create Task Button -->
+
+    <Button
+        android:id="@+id/toggle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#474448"
+        android:onClick="hideToggle"
+        android:text="Hide Past Due Tasks"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/create_task_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#474448"
+        android:contentDescription="Button to create a new task"
+        android:onClick="onCreateTaskClicked"
+        android:padding="12dp"
+        android:text="Create Task"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!-- Switch to hide past due tasks -->
+
+    <!-- Scrollable Task List Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

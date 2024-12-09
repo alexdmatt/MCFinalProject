@@ -1,0 +1,163 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E0DDCF">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Creation"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Task Name -->
+    <EditText
+        android:id="@+id/task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task Name"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <!-- Task Description -->
+    <EditText
+        android:id="@+id/task_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task Description"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Due Date Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date"
+        android:paddingTop="16dp" />
+
+    <Button
+        android:id="@+id/due_date_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#474448"
+        android:text="Select Due Date"
+        android:layout_marginTop="4dp" />
+
+
+    <!-- Priority Selection -->
+    <TextView
+        android:id="@+id/display_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Priority:" />
+
+    <RadioGroup
+        android:id="@+id/priority_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp">
+
+        <RadioButton
+            android:id="@+id/priority_0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/priority_0_bkgd"
+            android:text="0"
+            android:button="@null"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/priority_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/priority_1_bkgd"
+            android:text="1"
+            android:button="@null"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/priority_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/priority_2_bkgd"
+            android:text="2"
+            android:button="@null"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/priority_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/priority_3_bkgd"
+            android:text="3"
+            android:button="@null"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/priority_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/priority_4_bkgd"
+            android:text="4"
+            android:button="@null"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/priority_5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/priority_5_bkgd"
+            android:text="5"
+            android:button="@null"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#474448"
+        android:onClick="createTask"
+        android:text="Save" />
+
+    <!-- Home Button -->
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#474448"
+        android:onClick="homeBtn"
+        android:text="Home" />
+</LinearLayout>

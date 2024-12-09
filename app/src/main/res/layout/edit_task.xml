@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7EDE2"
+    android:padding="16dp">
+
+    <!-- Title for the Page -->
+
+    <!-- Change Title Section -->
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Edit Task"
+        android:textColor="#D62246"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+    <EditText
+        android:id="@+id/edit_task_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter New Title"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_label" />
+
+    <!-- Description Section -->
+    <TextView
+        android:id="@+id/description_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_title" />
+
+    <EditText
+        android:id="@+id/edit_task_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Task Description"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+    <!-- Calendar Section -->
+    <TextView
+        android:id="@+id/calendar_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Change Due Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_description" />
+
+    <CalendarView
+        android:id="@+id/edit_task_calendar"
+        android:layout_width="327dp"
+        android:layout_height="312dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar_label" />
+
+    <!-- Priority Section -->
+    <TextView
+        android:id="@+id/priority_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Priority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_task_calendar" />
+
+    <RadioGroup
+        android:id="@+id/priority_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priority_label">
+
+        <RadioButton
+            android:id="@+id/priority_0_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#B0BEC5"
+            android:text="0" />
+
+        <RadioButton
+            android:id="@+id/priority_1_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#85FF9E"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/priority_2_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#16DB65"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/priority_3_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFBD00"
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/priority_4_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF5400"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/priority_5_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF101F"
+            android:text="5" />
+    </RadioGroup>
+
+    <!-- Buttons Section -->
+
+    <Button
+        android:id="@+id/delete_task_button"
+        android:layout_width="149dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="60dp"
+        android:backgroundTint="#D62246"
+        android:onClick="handleDeleteTask"
+        android:text="Delete Task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/page_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Home Button -->
+
+    <Button
+        android:id="@+id/save_task_button"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#D62246"
+        android:onClick="handleSaveTask"
+        android:text="Save Task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority_radio_group" />
+
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#D62246"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority_radio_group" />
+</androidx.constraintlayout.widget.ConstraintLayout>
